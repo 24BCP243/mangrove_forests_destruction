@@ -1,0 +1,118 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: url('mangrove.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    animation: fadeInBody 1.2s ease forwards;
+    opacity: 0;
+  }
+  @keyframes fadeInBody {
+  to { opacity: 1; }
+  }
+  /* Website name at the top */
+  h1 {
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    background-color: #16a085;
+    width: 100%;
+  }
+
+  /* Container for buttons, vertically centered */
+  .btn-container-wrapper {
+    flex: 1; /* take remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    display:flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+   will-change: transform;
+  }
+
+  .btn-leaderboard {
+    background-color: #1abc9c;
+    color: white;
+  }
+
+  .btn-leaderboard:hover {
+    background-color: #16a085;
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .btn-complain {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .btn-complain:hover {
+    background-color: #c0392b;
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+  .btn:focus {
+    outline: 3px solid #1abc9c;
+    outline-offset: 3px;
+  }
+.btn-leaderboard, .btn-complain {
+  text-shadow: 0 0 2px rgba(0,0,0,0.45);
+}
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.8rem;
+    }
+  }
+  .image-3 {
+    background-image: url("images//mangrove-3.png");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    position: relative; /* needed for overlay */
+    z-index: 1;
+  }
+  .image-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4); /* adjust transparency (0.4 = 40%) */
+  z-index: -1; /* keep it behind text/buttons */
+}
