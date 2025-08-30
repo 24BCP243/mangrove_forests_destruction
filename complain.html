@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit a Complaint</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="complain.css">
+   
+</head>
+<body class="image-4">
+  <div class="complaint-form-container">
+    <h2><i class="fa-solid fa-exclamation-circle"></i> Submit a Complaint</h2>
+    <form action="/submit-complaint" method="post" enctype="multipart/form-data">
+      <div class="input-group">
+        <label for="description">Description of the Complaint:</label>
+        <i class="fa-solid fa-align-left"></i>
+        <textarea id="description" name="description" placeholder="Describe the issue in detail..." required></textarea>
+      </div>
+      <div class="input-group">
+        <label for="photo">Photo of the Issue:</label>
+        <i class="fa-solid fa-camera"></i>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+      </div>
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Complaint</button>
+    </form>
+  </div>
+</body>
+</html>
