@@ -1,0 +1,108 @@
+body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f0eaff 0%, #d6e8fa 100%);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .complaint-form-container {
+      background: rgba(122, 192, 150, 0.98);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(21, 105, 66, 0.11);
+      width: 380px;
+      max-width: 95vw;
+      padding: 2.3rem 2.1rem 1.7rem 2.1rem;
+      position: relative;
+    }
+    .complaint-form-container h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #141515;
+      margin-bottom: 1.2em;
+      font-weight: bold;
+    }
+    .input-group {
+      margin-bottom: 1.4em;
+      position: relative;
+    }
+    .input-group label {
+      color: rgb(33, 91, 149);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.4em;
+    }
+    .input-group i {
+      position: absolute;
+      top: 2.6em;
+      left: 13px;
+      font-size: 1.1em;
+      color: #88a7e0;
+    }
+    .input-group textarea,
+    .input-group input[type="file"] {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 9px;
+      border: 1px solid #cad7ef;
+      font-size: 1em;
+      outline: none;
+      padding: 0.9em 1em 0.9em 2.3em;
+      margin-top: 2px;
+      transition: border 0.23s;
+      background: #f3f7fd;
+      color: #334766;
+    }
+    .input-group textarea:focus,
+    .input-group input[type="file"]:focus {
+      border: 1.5px solid #89b4fa;
+      box-shadow: 0 2px 15px 0 rgba(88,127,218,0.09);
+    }
+    .input-group input[type="file"] {
+      padding-left: 2.5em;
+      background: #f6faff;
+    }
+    button {
+      width: 100%;
+      padding: 0.9em 0;
+      background: linear-gradient(90deg, #76aef1, #5685e7 70%);
+      border: none;
+      border-radius: 9px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 2px 10px 0 rgba(88,127,218,0.13);
+      cursor: pointer;
+      transition: background 0.12s, transform 0.08s;
+      margin-top: 0.5em;
+      letter-spacing: 0.05em;
+    }
+    button:hover, button:focus {
+      background: linear-gradient(90deg, #5685e7, #76aef1 70%);
+      transform: translateY(-1.5px) scale(1.03);
+    }
+    .image-4 {
+    background-image: url("images//mangrove-4.png");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    position: relative; /* needed for overlay */
+    z-index: 1;
+  }
+  .image-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4); /* adjust transparency (0.4 = 40%) */
+  z-index: -1; /* keep it behind text/buttons */
+}
